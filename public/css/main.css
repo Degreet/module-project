@@ -1,3 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Lato, Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: cornsilk;
+  height: 100vh;
+}
+
+output {
+  font-size: 80px;
+  font-weight: bold;
+  color: #255;
+}
+
+button {
+  border: none;
+  background: none;
+  color: #225577;
+  font-size: 50px;
+  border-radius: 50%;
+  transform: rotate(-90deg);
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+}
+
+button:active {
+  transform: rotate(-90deg) scale(1.1);
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
