@@ -4,7 +4,7 @@ let reqHandler = (_, resp) => resp.end("I can't")
 module.exports = {
   setup(reader) {
     reqHandler = async (req, resp) => {
-      const text = await reader(req.url)
+      const text = await reader(req.url == "/" ? "index.html" : req.url)
       resp.end(text)
     }
   },
