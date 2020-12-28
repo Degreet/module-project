@@ -1,17 +1,17 @@
 export default class Storage {
-  set(value) {
+  async set(value) {
     return localStorage.counter = value
   }
 
-  get() {
+  async get() {
     return localStorage.counter || 0
   }
 
-  plus() {
+  async plus() {
     return ++localStorage.counter
   }
 
-  minus() {
+  async minus() {
     return --localStorage.counter
   }
 }
