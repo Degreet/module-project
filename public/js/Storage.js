@@ -1,17 +1,24 @@
 export default class Storage {
+  constructor(name, defaultValue) {
+    if (!localStorage[`${name}-counter`])
+      localStorage[`${name}-counter`] = defaultValue
+    this.name = name
+  }
+
   async set(value) {
-    return localStorage.counter = value
+    if (this.onchange) this.onchange(value)
+    return localStorage[`${this.name}-counter`] = value
   }
 
   async get() {
-    return localStorage.counter || 0
+    return localStorage[`${this.name}-counter`] || 0
   }
 
   async plus() {
-    return ++localStorage.counter
+    return ++localStorage[`${this.name}-counter`]
   }
 
   async minus() {
-    return --localStorage.counter
+    return --localStorage[`${this.name}-counter`]
   }
 }

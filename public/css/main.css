@@ -40,3 +40,8 @@ div {
   justify-content: center;
   flex-direction: column;
 }
+
+#counterWrapper {
+  flex-direction: row;
+  gap: 30px;
+}
