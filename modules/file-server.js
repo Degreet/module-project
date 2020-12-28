@@ -5,6 +5,8 @@ module.exports = {
   setup(reader) {
     reqHandler = async (req, resp) => {
       const text = await reader(req.url == "/" ? "index.html" : req.url)
+      if (req.url.endsWith(".js"))
+        resp.setHeader("Content-Type", "text/javascript")
       resp.end(text)
     }
   },
